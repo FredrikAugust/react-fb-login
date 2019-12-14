@@ -4,10 +4,10 @@
     "module": "commonjs",
     "strict": true,
     "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
     "outDir": "./dist",
-    "declarations": true
+    "declaration": true
   },
-  include: ["src"],
+  "include": ["src"],
   "exclude": ["node_modules", "**/__tests__/*"]
 }
