@@ -12,15 +12,13 @@ _Note: To use the Facebook login API, you need to get an App ID from [here](http
 yarn add react-login-with-facebook
 ```
 
-And import it with 
+## Usage
 
 ```typescript
 import FacebookLogin from 'react-login-with-facebook';
 ```
 
-## Usage
-
-## Configuration
+### Configuration
 
 ## License
 
