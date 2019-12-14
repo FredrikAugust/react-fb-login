@@ -8,6 +8,7 @@
   "license": "AGPLv3.0",
   "devDependencies": {
     "prettier": "^1.19.1",
+    "react": "^16.12.0",
     "tslint": "^5.20.1",
     "tslint-config-prettier": "^1.18.0",
     "tslint-plugin-prettier": "^2.0.1",
@@ -17,9 +18,17 @@
   "scripts": {
     "build": "tsc",
     "lint": "tslint -p .",
-    "lint:fix": "tslint --fix -p ."
+    "lint:fix": "tslint --fix -p .",
+    "prepare": "yarn build",
+    "prepublishOnly": "yarn lint:fix",
+    "preversion": "yarn lint:fix",
+    "version": "yarn lint:fix && git add -A src",
+    "postversion": "git push && git push --tags"
   },
   "files": [
     "dist/**/*"
-  ]
+  ],
+  "dependencies": {
+    "@types/react": "^16.9.16"
+  }
 }
